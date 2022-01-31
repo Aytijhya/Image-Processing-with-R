@@ -49,13 +49,13 @@ write_pnm <- function(image, filename, nbytes = 1L) {
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # Use 'nbytes' to set the maximum value for the image
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  if (nbytes == 1) {
+  if (nbytes == 1) 
     max_value <- 255L
-  } else if (nbytes == 2) {
+  else if (nbytes == 2) 
     max_value <- 65535L
-  } else {
+  else 
     stop("Only supports nbytes = 1 or 2")
-  }
+
   
   
   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
