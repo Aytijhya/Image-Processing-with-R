@@ -10,10 +10,10 @@ write_pnm <- function(image, filename) {
     ncol        <- dims[2]
     magic       <- 'P5'  # single-channel image
     max_value=255L
-  con <- file(filename, open = 'wb')
-  on.exit(close(con))
-  writeChar(paste0(magic, "\n", ncol, ' ', nrow, "\n", max_value, "\n"), con = con, eos = NULL)
-  writeBin(values, con = con, size = 1L)
+    con <- file(filename, open = 'wb')
+    on.exit(close(con))
+    writeChar(paste0(magic, "\n", ncol, ' ', nrow, "\n", max_value, "\n"), con = con, eos = NULL)
+    writeBin(values, con = con, size = 1L)
 }
 
 mat=matrix(sample(1:255,10000,replace=TRUE),ncol=100)
